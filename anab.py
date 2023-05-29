@@ -17,7 +17,7 @@ for j in range(n):
 print("Матрица планирования эксперимента:")
 print(matrix)
 matrix2 = matrix + 10
-print(matrix2)
+print("vfnhbwf ",matrix2)
 
 #СДЕЛАЙ ТАК ЧТОБЫ ЧИСЛО H БЫЛО КАЖДЫЙ РАЗ НОВОЕ
 # Создаем новую матрицу
