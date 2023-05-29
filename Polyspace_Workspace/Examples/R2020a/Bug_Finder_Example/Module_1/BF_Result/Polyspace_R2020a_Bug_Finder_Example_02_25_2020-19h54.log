@@ -1,0 +1,1307 @@
+<polyspace-bug-finder-server R2020a PID205525 PGID205525>
+
+Polyspace verification of Bug_Finder_Example project.
+Starting at 02/25/2020, 19h54.
+
+Remark: -O2 is ignored in Polyspace Bug Finder.
+Remark: -to is ignored in Polyspace Bug Finder.
+Remark: -main-generator-calls is ignored in Polyspace Bug Finder.
+Remark: -unsigned-integer-overflows is ignored in Polyspace Bug Finder.
+Remark: -signed-integer-overflows is ignored in Polyspace Bug Finder.
+Remark: -check-subnormal is ignored in Polyspace Bug Finder.
+Remark: -uncalled-function-checks is ignored in Polyspace Bug Finder.
+Remark: -main-generator-writes-variables is ignored in Polyspace Bug Finder.
+Remark: -float-rounding-mode is ignored in Polyspace Bug Finder.
+
+Activated checkers: 
+       INT_ZERO_DIV, FLOAT_ZERO_DIV, INT_CONV_OVFL, UINT_CONV_OVFL, SIGN_CHANGE, FLOAT_CONV_OVFL, 
+  INT_OVFL, UINT_OVFL, FLOAT_OVFL, INT_STD_LIB, FLOAT_STD_LIB, SHIFT_NEG, SHIFT_OVFL, 
+  OUT_BOUND_ARRAY, NULL_PTR, OUT_BOUND_PTR, FUNC_CAST, PTR_CAST, MEM_STD_LIB, STR_STD_LIB, 
+  NULL_PTR_ARITH, OBJECT_SIZE_MISMATCH, FREED_PTR, UNPROTECTED_MEMORY_ALLOCATION, 
+  DOUBLE_DEALLOCATION, BAD_FREE, MEM_LEAK, BAD_EQUAL_USE, BAD_EQUAL_EQUAL_USE, DECL_MISMATCH, 
+  BAD_FLOAT_OP, MISSING_NULL_CHAR, QUALIFIER_MISMATCH, PTR_SIZEOF_MISMATCH, TYPEDEF_MISMATCH, 
+  USELESS_WRITE, NON_INIT_VAR, NON_INIT_PTR, VAR_SHADOWING, MISSING_RETURN, RESOURCE_LEAK, 
+  UNREACHABLE, DEAD_CODE, PARTIALLY_ACCESSED_ARRAY, UNCALLED_FUNC, NON_INIT_PTR_CONV, 
+  DEACTIVATED_CODE, USELESS_IF, DEADLOCK, BAD_LOCK, DOUBLE_LOCK, DATA_RACE, DATA_RACE_ALL, 
+  DOUBLE_UNLOCK, BAD_UNLOCK, OTHER_STD_LIB, PASS_BY_VALUE, ASSERT, STRING_FORMAT, 
+  MORE_THAN_ONE_STATEMENT, TAINTED_HOSTID, TAINTED_ENV_VARIABLE, TAINTED_STRING_FORMAT, 
+  PATH_TRAVERSAL, TAINTED_LOOP_BOUNDARY, TAINTED_MEMORY_ALLOC_SIZE, CHROOT_MISUSE, 
+  RETURN_NOT_CHECKED, TOCTOU, TAINTED_PATH_LIB, RELATIVE_PATH_LIB, SENSITIVE_DATA_PRINT, 
+  IMPROPER_ARRAY_INIT, BAD_PTR_SCALING, SIZEOF_MISUSE, HARD_CODED_BUFFER_SIZE, 
+  HARD_CODED_LOOP_BOUNDARY, BAD_NETWORK_CONNECT_ORDER, FLOAT_ABSORPTION, BAD_PLAIN_CHAR_USE, 
+  BITWISE_NEG, INT_TO_FLOAT_PRECISION_LOSS, LOCAL_ADDR_ESCAPE, PATH_BUFFER_OVERFLOW, 
+  STR_FORMAT_BUFFER_OVERFLOW, STRLIB_BUFFER_OVERFLOW, STRLIB_BUFFER_UNDERFLOW, PUTENV_AUTO_VAR, 
+  PTR_TO_DIFF_ARRAY, WIN_MISMATCH_DEALLOC, ALIGNMENT_CHANGE, READ_ONLY_RESOURCE_WRITE, 
+  CLOSED_RESOURCE_USE, DOUBLE_RESOURCE_CLOSE, DOUBLE_RESOURCE_OPEN, OPERATOR_PRECEDENCE, 
+  STD_FUNC_ARG_MISMATCH, INVALID_MEMORY_ASSUMPTION, CONSTANT_OBJECT_WRITE, MEMSET_INVALID_SIZE, 
+  INVALID_VA_LIST_ARG, NON_POSITIVE_VLA_SIZE, OVERLAPPING_ASSIGN, OVERLAPPING_COPY, 
+  BAD_FILE_ACCESS_MODE_STATUS, WRITE_INTERNAL_BUFFER_RETURNED_FROM_STD_FUNC, MEMSET_INVALID_VALUE, 
+  BAD_INT_PTR_CAST, UNSAFE_STR_TO_NUMERIC, EXIT_ABNORMAL_HANDLER, MEMCMP_FLOAT, MEMCMP_STRINGS, 
+  MEMCMP_PADDING_DATA, NON_REENTRANT_STD_RETURN, INVALID_ENV_POINTER, ERRNO_MISUSE, 
+  MISSING_ERRNO_RESET, CHARACTER_MISUSE, CHAR_EOF_CONFUSED, IO_INTERLEAVING, 
+  SIG_HANDLER_COMP_EXCP_RETURN, SIG_HANDLER_CALLING_SIGNAL, SIG_HANDLER_ASYNC_UNSAFE, 
+  SIG_HANDLER_ASYNC_UNSAFE_STRICT, UNPROTOTYPED_FUNC_CALL, FILE_OBJECT_MISUSE, 
+  FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE, SIG_HANDLER_SHARED_OBJECT, MISSING_BYTESWAP, 
+  INVALID_FILE_POS, INDETERMINATE_STRING, MACRO_USED_AS_OBJECT, SIDE_EFFECT_IGNORED, 
+  PRE_UCNAME_JOIN_TOKENS, PRE_DIRECTIVE_MACRO_ARG, INLINE_CONSTRAINT_NOT_RESPECTED, 
+  VA_ARG_INCORRECT_TYPE, TOO_MANY_VA_ARG_CALLS, STREAM_WITH_SIDE_EFFECT, TEMP_OBJECT_ACCESS, 
+  SIG_HANDLER_ERRNO_MISUSE, DATA_RACE_STD_LIB, DESTROY_LOCKED, DANGEROUS_STD_FUNC, BAD_UMASK, 
+  DANGEROUS_PERMISSIONS, RAND_SEED_CONSTANT, RAND_SEED_PREDICTABLE, VULNERABLE_PRNG, 
+  FUNC_PTR_ABSOLUTE_ADDR, RELATIVE_PATH_CMD, NON_SECURE_TEMP_FILE, SENSITIVE_STACK_NOT_CLEARED, 
+  SENSITIVE_HEAP_NOT_CLEARED, OBSOLETE_STD_FUNC, DATA_LENGTH_MISMATCH, UNSAFE_STD_FUNC, 
+  UNSAFE_STD_CRYPT, MISSING_SWITCH_CASE, BAD_PRIVILEGE_DROP_ORDER, MISSING_PRIVILEGE_DROP_CHECK, 
+  READLINK_MISUSE, ERRNO_NOT_CHECKED, FILE_EXPOSURE_TO_CHILD, UNSAFE_SYSTEM_CALL, 
+  PADDING_INFO_LEAK, CRYPTO_CIPHER_BAD_FUNCTION, CRYPTO_CIPHER_NO_ALGORITHM, CRYPTO_CIPHER_NO_KEY, 
+  CRYPTO_CIPHER_NO_IV, CRYPTO_CIPHER_NO_DATA, CRYPTO_CIPHER_NO_FINAL, CRYPTO_CIPHER_WEAK_CIPHER, 
+  CRYPTO_CIPHER_WEAK_MODE, CRYPTO_CIPHER_CONSTANT_KEY, CRYPTO_CIPHER_CONSTANT_IV, 
+  CRYPTO_CIPHER_PREDICTABLE_KEY, CRYPTO_CIPHER_PREDICTABLE_IV, CRYPTO_PKEY_NO_PUBLIC_KEY, 
+  CRYPTO_PKEY_NO_PRIVATE_KEY, CRYPTO_PKEY_NO_PEER, CRYPTO_PKEY_NO_PARAMS, CRYPTO_PKEY_NO_DATA, 
+  CRYPTO_PKEY_WEAK_PARAMS, CRYPTO_RSA_LOW_EXPONENT, CRYPTO_RSA_WEAK_PADDING, 
+  CRYPTO_RSA_BAD_PADDING, CRYPTO_RSA_NO_BLINDING, CRYPTO_PKEY_INCORRECT_KEY, 
+  CRYPTO_PKEY_INCORRECT_INIT, CRYPTO_RSA_NO_PADDING, CRYPTO_MD_WEAK_HASH, CRYPTO_MD_BAD_FUNCTION, 
+  CRYPTO_SSL_WEAK_PROTOCOL, TAINTED_SIGN_CHANGE, TAINTED_PATH_CMD, TAINTED_EXTERNAL_CMD, 
+  TAINTED_VLA_SIZE, TAINTED_INT_MOD, TAINTED_INT_DIVISION, TAINTED_ARRAY_INDEX, TAINTED_PTR_OFFSET, 
+  TAINTED_PTR, TAINTED_STRING, UNUSED_PARAMETER, HARD_CODED_MEM_SIZE, SETJMP_LONGJMP_USE, 
+  BITWISE_ARITH_MIX, MISSING_FREED_PTR_RESET, MISSING_SWITCH_BREAK
+
+
+Verifying sources compliance ...
+
+Options used with Verifier:
+-prog=Bug_Finder_Example
+-lang=C
+-polyspace-version=3.2 (R2020a)
+-results-dir=/mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/Module_1/BF_Result
+-date=25/02/2020
+
+User:
+-critical-section-end=[END_CRITICAL_SECTION:Cs10,release_sensor:Cs11,release_printer:Cs12,release_sensor2:Cs13,release_printer2:Cs14]
+-critical-section-begin=[BEGIN_CRITICAL_SECTION:Cs10,acquire_sensor:Cs11,acquire_printer:Cs12,acquire_sensor2:Cs13,acquire_printer2:Cs14]
+-entry-points=[bug_datarace_task1,bug_datarace_task2,bug_datarace_task3,bug_datarace_task4,bug_deadlock_task1,bug_deadlock_task2,bug_doublelock_task,bug_doubleunlock_task,bug_badlock_task,bug_badunlock_task,bug_dataracestdlib_task1,bug_dataracestdlib_task2,bug_destroylocked_task,corrected_datarace_task1,corrected_datarace_task2,corrected_datarace_task3,corrected_datarace_task4,corrected_deadlock_task1,corrected_deadlock_task2,corrected_doublelock_task,corrected_doubleunlock_task,corrected_badlock_task,corrected_badunlock_task,corrected_dataracestdlib_task1,corrected_dataracestdlib_task2,corrected_destroylocked_task]
+-checkers-selection-file=/mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/StandardsConfiguration.xml
+-custom-rules=from-file
+-checkers=[ALIGNMENT_CHANGE,ASSERT,BAD_EQUAL_EQUAL_USE,BAD_EQUAL_USE,BAD_FILE_ACCESS_MODE_STATUS,BAD_FLOAT_OP,BAD_FREE,BAD_INT_PTR_CAST,BAD_LOCK,BAD_NETWORK_CONNECT_ORDER,BAD_PLAIN_CHAR_USE,BAD_PRIVILEGE_DROP_ORDER,BAD_PTR_SCALING,BAD_UMASK,BAD_UNLOCK,BITWISE_ARITH_MIX,BITWISE_NEG,CHARACTER_MISUSE,CHAR_EOF_CONFUSED,CHROOT_MISUSE,CLOSED_RESOURCE_USE,CONSTANT_OBJECT_WRITE,CRYPTO_CIPHER_BAD_FUNCTION,CRYPTO_CIPHER_CONSTANT_IV,CRYPTO_CIPHER_CONSTANT_KEY,CRYPTO_CIPHER_NO_ALGORITHM,CRYPTO_CIPHER_NO_DATA,CRYPTO_CIPHER_NO_FINAL,CRYPTO_CIPHER_NO_IV,CRYPTO_CIPHER_NO_KEY,CRYPTO_CIPHER_PREDICTABLE_IV,CRYPTO_CIPHER_PREDICTABLE_KEY,CRYPTO_CIPHER_WEAK_CIPHER,CRYPTO_CIPHER_WEAK_MODE,CRYPTO_MD_BAD_FUNCTION,CRYPTO_MD_WEAK_HASH,CRYPTO_PKEY_INCORRECT_INIT,CRYPTO_PKEY_INCORRECT_KEY,CRYPTO_PKEY_NO_DATA,CRYPTO_PKEY_NO_PARAMS,CRYPTO_PKEY_NO_PEER,CRYPTO_PKEY_NO_PRIVATE_KEY,CRYPTO_PKEY_NO_PUBLIC_KEY,CRYPTO_PKEY_WEAK_PARAMS,CRYPTO_RSA_BAD_PADDING,CRYPTO_RSA_LOW_EXPONENT,CRYPTO_RSA_NO_BLINDING,CRYPTO_RSA_NO_PADDING,CRYPTO_RSA_WEAK_PADDING,CRYPTO_SSL_WEAK_PROTOCOL,DANGEROUS_PERMISSIONS,DANGEROUS_STD_FUNC,DATA_LENGTH_MISMATCH,DATA_RACE,DATA_RACE_ALL,DATA_RACE_STD_LIB,DEACTIVATED_CODE,DEADLOCK,DEAD_CODE,DECL_MISMATCH,DESTROY_LOCKED,DOUBLE_DEALLOCATION,DOUBLE_LOCK,DOUBLE_RESOURCE_CLOSE,DOUBLE_RESOURCE_OPEN,DOUBLE_UNLOCK,ERRNO_MISUSE,ERRNO_NOT_CHECKED,EXIT_ABNORMAL_HANDLER,FILE_EXPOSURE_TO_CHILD,FILE_OBJECT_MISUSE,FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE,FLOAT_ABSORPTION,FLOAT_CONV_OVFL,FLOAT_OVFL,FLOAT_STD_LIB,FLOAT_ZERO_DIV,FREED_PTR,FUNC_CAST,FUNC_PTR_ABSOLUTE_ADDR,HARD_CODED_BUFFER_SIZE,HARD_CODED_LOOP_BOUNDARY,HARD_CODED_MEM_SIZE,IMPROPER_ARRAY_INIT,INDETERMINATE_STRING,INLINE_CONSTRAINT_NOT_RESPECTED,INT_CONV_OVFL,INT_OVFL,INT_STD_LIB,INT_TO_FLOAT_PRECISION_LOSS,INT_ZERO_DIV,INVALID_ENV_POINTER,INVALID_FILE_POS,INVALID_MEMORY_ASSUMPTION,INVALID_VA_LIST_ARG,IO_INTERLEAVING,LOCAL_ADDR_ESCAPE,MACRO_USED_AS_OBJECT,MEMCMP_FLOAT,MEMCMP_PADDING_DATA,MEMCMP_STRINGS,MEMSET_INVALID_SIZE,MEMSET_INVALID_VALUE,MEM_LEAK,MEM_STD_LIB,MISSING_BYTESWAP,MISSING_ERRNO_RESET,MISSING_FREED_PTR_RESET,MISSING_NULL_CHAR,MISSING_PRIVILEGE_DROP_CHECK,MISSING_RETURN,MISSING_SWITCH_BREAK,MISSING_SWITCH_CASE,MORE_THAN_ONE_STATEMENT,NON_INIT_PTR,NON_INIT_PTR_CONV,NON_INIT_VAR,NON_POSITIVE_VLA_SIZE,NON_REENTRANT_STD_RETURN,NON_SECURE_TEMP_FILE,NULL_PTR,NULL_PTR_ARITH,OBJECT_SIZE_MISMATCH,OBSOLETE_STD_FUNC,OPERATOR_PRECEDENCE,OTHER_STD_LIB,OUT_BOUND_ARRAY,OUT_BOUND_PTR,OVERLAPPING_ASSIGN,OVERLAPPING_COPY,PADDING_INFO_LEAK,PARTIALLY_ACCESSED_ARRAY,PASS_BY_VALUE,PATH_BUFFER_OVERFLOW,PATH_TRAVERSAL,PRE_DIRECTIVE_MACRO_ARG,PRE_UCNAME_JOIN_TOKENS,PTR_CAST,PTR_SIZEOF_MISMATCH,PTR_TO_DIFF_ARRAY,PUTENV_AUTO_VAR,QUALIFIER_MISMATCH,RAND_SEED_CONSTANT,RAND_SEED_PREDICTABLE,READLINK_MISUSE,READ_ONLY_RESOURCE_WRITE,RELATIVE_PATH_CMD,RELATIVE_PATH_LIB,RESOURCE_LEAK,RETURN_NOT_CHECKED,SENSITIVE_DATA_PRINT,SENSITIVE_HEAP_NOT_CLEARED,SENSITIVE_STACK_NOT_CLEARED,SETJMP_LONGJMP_USE,SHIFT_NEG,SHIFT_OVFL,SIDE_EFFECT_IGNORED,SIGN_CHANGE,SIG_HANDLER_ASYNC_UNSAFE,SIG_HANDLER_ASYNC_UNSAFE_STRICT,SIG_HANDLER_CALLING_SIGNAL,SIG_HANDLER_COMP_EXCP_RETURN,SIG_HANDLER_ERRNO_MISUSE,SIG_HANDLER_SHARED_OBJECT,SIZEOF_MISUSE,STD_FUNC_ARG_MISMATCH,STREAM_WITH_SIDE_EFFECT,STRING_FORMAT,STRLIB_BUFFER_OVERFLOW,STRLIB_BUFFER_UNDERFLOW,STR_FORMAT_BUFFER_OVERFLOW,STR_STD_LIB,TAINTED_ARRAY_INDEX,TAINTED_ENV_VARIABLE,TAINTED_EXTERNAL_CMD,TAINTED_HOSTID,TAINTED_INT_DIVISION,TAINTED_INT_MOD,TAINTED_LOOP_BOUNDARY,TAINTED_MEMORY_ALLOC_SIZE,TAINTED_PATH_CMD,TAINTED_PATH_LIB,TAINTED_PTR,TAINTED_PTR_OFFSET,TAINTED_SIGN_CHANGE,TAINTED_STRING,TAINTED_STRING_FORMAT,TAINTED_VLA_SIZE,TEMP_OBJECT_ACCESS,TOCTOU,TOO_MANY_VA_ARG_CALLS,TYPEDEF_MISMATCH,UINT_CONV_OVFL,UINT_OVFL,UNCALLED_FUNC,UNPROTECTED_MEMORY_ALLOCATION,UNPROTOTYPED_FUNC_CALL,UNREACHABLE,UNSAFE_STD_CRYPT,UNSAFE_STD_FUNC,UNSAFE_STR_TO_NUMERIC,UNSAFE_SYSTEM_CALL,UNUSED_PARAMETER,USELESS_IF,USELESS_WRITE,VAR_SHADOWING,VA_ARG_INCORRECT_TYPE,VULNERABLE_PRNG,WIN_MISMATCH_DEALLOC,WRITE_INTERNAL_BUFFER_RETURNED_FROM_STD_FUNC]
+-misra3=mandatory-required
+-target=x86_64
+-compiler=gnu4.6
+-dos=true
+-do-not-generate-results-for=custom=/mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/main.c
+-verif-version=1.0
+-author=MathWorks
+
+
+Verifying host configuration:
+Number of cores:                20
+Processor type:                 x86_64
+Processor model:                Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz
+Processor frequency:            3.100 GHz
+Memory > 4 GB:                                          110.7 GB
+Tmp space available in /tmp/BR2020ad_1323502_140804:    332.1 GB
+
+Remark: 20 core(s) detected. The verification creates 20 process(es).
+*** Configuration of the host :	OK
+
+Computer memory:
+              total        used        free      shared  buff/cache   available
+Mem:      115424532     8920624     4532952        7856   101970956   105566884
+Swap:      36863996        5584    36858412
+
+
+Type /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/Module_1/BF_Result/kill-rte-kernel on host bat6312glnxa64 to halt Verifier process
+
+
+Checking license ...
+
+License is OK
+
+
+Polyspace C analysis
+Copyright 1999-2020 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Feb 25 19:54:06 2020
+Host: Linux bat6312glnxa64 4.9.0-4-amd64 x86_64
+User: batserve
+**********************************************************
+***
+*** Verifying GNU C 4.6 sources
+***
+**********************************************************
+
+Verifying sources ...
+Verifying concurrency.c (1/13)
+Verifying resourcemanagement.c (2/13)
+Verifying main.c (3/13)
+Verifying staticmemory.c (4/13)
+Verifying numerical.c (5/13)
+Verifying goodpractice.c (6/13)
+Verifying cryptography.c (7/13)
+Verifying dataflow.c (8/13)
+Verifying programming2.c (9/13)
+Verifying security.c (10/13)
+Verifying dynamicmemory.c (11/13)
+Verifying tainteddata.c (12/13)
+Verifying programming.c (13/13)
+Global compilation phase...
+
+Number of files                  : 13
+Number of lines                  : 10031
+Number of lines without comments : 7538
+
+Verifying cross-files ANSI C compliance
+
+Stubbing standard library functions ...
+Remark: The generated default DRS XML file "drs-template.xml" can be found in <result_dir> folder.
+Doing code transformations ...
+
+
+**********************************************************
+CUSTOM RULES Rule checker results
+ Use the Report Generator in order to get the complete report.
+**********************************************************
+Summary per file:
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/concurrency.c: 
+    37 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/cryptography.c: 
+    56 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/dataflow.c: 
+    38 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/dynamicmemory.c: 
+    16 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/goodpractice.c: 
+    31 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/lib_crypto_checkers.h: 
+    82 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/numerical.c: 
+    37 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/programming.c: 
+    167 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/programming2.c: 
+    1 rule violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/resourcemanagement.c: 
+    10 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/security.c: 
+    82 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/staticmemory.c: 
+    40 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/tainteddata.c: 
+    45 rules violated
+**********************************************************
+Summary per rule:
+  rule 7.1 violated 631 times
+  rule 8.1 violated 11 times
+
+
+**********************************************************
+MISRA C:2012 Rule checker results
+ Use the Report Generator in order to get the complete report.
+Coding standards checking might not be complete. Some rule violations
+ are detected after the source compliance checking phase.
+**********************************************************
+Summary per file:
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/concurrency.c: 
+    60 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/cryptography.c: 
+    302 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/dataflow.c: 
+    95 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/dynamicmemory.c: 
+    95 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/goodpractice.c: 
+    80 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/lib_crypto_checkers.h: 
+    10 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/numerical.c: 
+    104 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/programming.c: 
+    536 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/programming2.c: 
+    2 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/resourcemanagement.c: 
+    52 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/security.c: 
+    308 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/staticmemory.c: 
+    105 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/tainteddata.c: 
+    125 rules violated
+**********************************************************
+Summary per rule:
+  rule 8.4 violated 557 times
+  rule 15.6 violated 211 times
+  rule 21.6 violated 154 times
+  rule 10.3 violated 122 times
+  rule 8.2 violated 114 times
+  rule 8.5 violated 79 times
+  rule 17.7 violated 76 times
+  rule D4.12 violated 73 times
+  rule 21.3 violated 72 times
+  rule 5.8 violated 43 times
+  rule 10.1 violated 40 times
+  rule 14.4 violated 37 times
+  rule D1.1 violated 35 times
+  rule 17.1 violated 29 times
+  rule 21.5 violated 25 times
+  rule 21.1 violated 12 times
+  rule 21.8 violated 12 times
+  rule 10.4 violated 10 times
+  rule 11.3 violated 10 times
+  rule 16.3 violated 10 times
+  rule 7.4 violated 10 times
+  rule 8.6 violated 10 times
+  rule 16.1 violated 9 times
+  rule 21.19 violated 9 times
+  rule 5.3 violated 9 times
+  rule 11.8 violated 8 times
+  rule 21.10 violated 8 times
+  rule 14.3 violated 6 times
+  rule 5.1 violated 6 times
+  rule 10.7 violated 5 times
+  rule 11.1 violated 5 times
+  rule 7.2 violated 5 times
+  rule 10.8 violated 4 times
+  rule 14.1 violated 4 times
+  rule 16.4 violated 4 times
+  rule 18.8 violated 4 times
+  rule 21.16 violated 4 times
+  rule 12.2 violated 3 times
+  rule 13.5 violated 3 times
+  rule 14.2 violated 3 times
+  rule 21.4 violated 3 times
+  rule 21.7 violated 3 times
+  rule 1.1 violated 2 times
+  rule 10.6 violated 2 times
+  rule 19.1 violated 2 times
+  rule 20.6 violated 2 times
+  rule 21.2 violated 2 times
+  rule 5.6 violated 2 times
+  rule 5.7 violated 2 times
+  rule 8.10 violated 2 times
+  rule 13.6 violated 1 time
+  rule 15.7 violated 1 time
+  rule 17.4 violated 1 time
+  rule 18.2 violated 1 time
+  rule 18.6 violated 1 time
+  rule 18.7 violated 1 time
+  rule 2.1 violated 1 time
+  rule 2.2 violated 1 time
+  rule 20.7 violated 1 time
+  rule 22.5 violated 1 time
+  rule 8.3 violated 1 time
+  rule 9.4 violated 1 time
+
+
+
+
+Packing compilation data
+
+Defects statistics:
+  - Total number of defects: 54
+  - BAD_EQUAL_EQUAL_USE: 1
+  - BAD_EQUAL_USE: 2
+  - BAD_INT_PTR_CAST: 2
+  - BITWISE_ARITH_MIX: 1
+  - DEACTIVATED_CODE: 1
+  - DECL_MISMATCH: 1
+  - FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE: 1
+  - FUNC_CAST: 4
+  - FUNC_PTR_ABSOLUTE_ADDR: 1
+  - HARD_CODED_BUFFER_SIZE: 2
+  - HARD_CODED_LOOP_BOUNDARY: 1
+  - IMPROPER_ARRAY_INIT: 2
+  - INLINE_CONSTRAINT_NOT_RESPECTED: 1
+  - MACRO_USED_AS_OBJECT: 2
+  - MISSING_FREED_PTR_RESET: 3
+  - MISSING_NULL_CHAR: 1
+  - MISSING_RETURN: 1
+  - MISSING_SWITCH_BREAK: 2
+  - MORE_THAN_ONE_STATEMENT: 1
+  - OPERATOR_PRECEDENCE: 1
+  - OVERLAPPING_ASSIGN: 1
+  - OVERLAPPING_COPY: 1
+  - PASS_BY_VALUE: 1
+  - PRE_DIRECTIVE_MACRO_ARG: 2
+  - PRE_UCNAME_JOIN_TOKENS: 1
+  - PTR_CAST: 1
+  - PTR_SIZEOF_MISMATCH: 1
+  - QUALIFIER_MISMATCH: 1
+  - SIDE_EFFECT_IGNORED: 1
+  - STREAM_WITH_SIDE_EFFECT: 2
+  - STRING_FORMAT: 1
+  - STR_FORMAT_BUFFER_OVERFLOW: 1
+  - TEMP_OBJECT_ACCESS: 1
+  - TYPEDEF_MISMATCH: 1
+  - UNCALLED_FUNC: 1
+  - UNPROTOTYPED_FUNC_CALL: 1
+  - UNSAFE_SYSTEM_CALL: 2
+  - UNUSED_PARAMETER: 1
+  - VAR_SHADOWING: 1
+  - VA_ARG_INCORRECT_TYPE: 1
+done.
+
+**********************************************************
+***
+*** GNU C 4.6 sources verification done
+***
+**********************************************************
+Ending at: Tue Feb 25 19:54:40 2020
+User time for compilation: 00:00:33.64 (33.64real, 17.12u + 3.5s (0.12gc))
+
+Polyspace C analysis
+Copyright 1999-2020 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Feb 25 19:54:40 2020
+Host: Linux bat6312glnxa64 4.9.0-4-amd64 x86_64
+User: batserve
+**********************************************************
+***
+*** Beginning Bug-finder - Pre-analysis
+***
+**********************************************************
+**** Bug-finder - Pre-analysis - 1 (P_AL)
+Total complexity = 75921
+**** Bug-finder - Pre-analysis - 1 (P_AL) took 15.28real, 9.15u + 0.49s (1.3gc)
+**** Bug-finder - Pre-analysis - 2 (P_ACP)
+* n-acp-t = 2 n-epp' = 2 n-acp-l = 3
+**** Bug-finder - Pre-analysis - 2 (P_ACP) took 2.56real, 2.15u + 0.29s (0.42gc)
+**** Bug-finder - Pre-analysis - 3 (P_O)
+**** Bug-finder - Pre-analysis - 3 (P_O) took 2.16real, 1.99u + 0.04s (0.14gc)
+**** Bug-finder - Pre-analysis - 4 (P_MA)
+**** Bug-finder - Pre-analysis - 4 (P_MA) took 0.9real, 0.81u + 0.02s (0.06gc)
+**** Bug-finder - Pre-analysis - 5 (P_G)
+**** Bug-finder - Pre-analysis - 5 (P_G) took 1.3real, 1.17u + 0.02s (0.09gc)
+**** Bug-finder - Pre-analysis - 6 (P_DLC)
+**** Bug-finder - Pre-analysis - 6 (P_DLC) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 7 (P_DRC)
+**** Bug-finder - Pre-analysis - 7 (P_DRC) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 8 (P_TT)
+**** Bug-finder - Pre-analysis - 8 (P_TT) took 0.01real, 0.01u + 0s
+**** Bug-finder - Pre-analysis - 9 (P_FI)
+**** Bug-finder - Pre-analysis - 9 (P_FI) took 2.04real, 1.83u + 0.1s (0.14gc)
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 72
+  - SIG_HANDLER_ASYNC_UNSAFE_STRICT: 1
+  - MEM_LEAK: 4
+  - LOCAL_ADDR_ESCAPE: 1
+  - DOUBLE_RESOURCE_OPEN: 1
+  - EXIT_ABNORMAL_HANDLER: 1
+  - SIG_HANDLER_ASYNC_UNSAFE: 3
+  - DESTROY_LOCKED: 1
+  - SIG_HANDLER_SHARED_OBJECT: 1
+  - DATA_RACE: 2
+  - DATA_RACE_STD_LIB: 1
+  - DOUBLE_DEALLOCATION: 1
+  - RESOURCE_LEAK: 1
+  - BAD_EQUAL_EQUAL_USE: 1
+  - BAD_EQUAL_USE: 2
+  - BAD_INT_PTR_CAST: 2
+  - BITWISE_ARITH_MIX: 1
+  - DEACTIVATED_CODE: 1
+  - DECL_MISMATCH: 1
+  - FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE: 1
+  - FUNC_CAST: 4
+  - FUNC_PTR_ABSOLUTE_ADDR: 1
+  - HARD_CODED_BUFFER_SIZE: 2
+  - HARD_CODED_LOOP_BOUNDARY: 1
+  - IMPROPER_ARRAY_INIT: 2
+  - INLINE_CONSTRAINT_NOT_RESPECTED: 1
+  - MACRO_USED_AS_OBJECT: 2
+  - MISSING_FREED_PTR_RESET: 3
+  - MISSING_NULL_CHAR: 1
+  - MISSING_RETURN: 1
+  - MISSING_SWITCH_BREAK: 2
+  - MORE_THAN_ONE_STATEMENT: 1
+  - OPERATOR_PRECEDENCE: 1
+  - OVERLAPPING_ASSIGN: 1
+  - OVERLAPPING_COPY: 1
+  - PASS_BY_VALUE: 1
+  - PRE_DIRECTIVE_MACRO_ARG: 2
+  - PRE_UCNAME_JOIN_TOKENS: 1
+  - PTR_CAST: 1
+  - PTR_SIZEOF_MISMATCH: 1
+  - QUALIFIER_MISMATCH: 1
+  - SIDE_EFFECT_IGNORED: 1
+  - STREAM_WITH_SIDE_EFFECT: 2
+  - STRING_FORMAT: 1
+  - STR_FORMAT_BUFFER_OVERFLOW: 1
+  - TEMP_OBJECT_ACCESS: 1
+  - TYPEDEF_MISMATCH: 1
+  - UNCALLED_FUNC: 1
+  - UNPROTOTYPED_FUNC_CALL: 1
+  - UNSAFE_SYSTEM_CALL: 2
+  - UNUSED_PARAMETER: 1
+  - VAR_SHADOWING: 1
+  - VA_ARG_INCORRECT_TYPE: 1
+
+GUI files generation completed in 0.65real
+
+**********************************************************
+***
+*** Bug-finder - Pre-analysis done
+***
+**********************************************************
+Ending at: Tue Feb 25 19:55:08 2020
+User time for pre-analysis: 00:00:27.95 (27.95real, 18.98u + 1.32s (0.05gc))
+
+Polyspace C analysis
+Copyright 1999-2020 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Feb 25 19:55:08 2020
+Host: Linux bat6312glnxa64 4.9.0-4-amd64 x86_64
+User: batserve
+**********************************************************
+***
+*** Beginning Bug-finder - Function Analysis
+***
+**********************************************************
+**** Bug-finder - Function Analysis - 1 (Verified functions #1 to #100 on 503) took 5.77real
+**** Bug-finder - Function Analysis - 2 (Verified functions #101 to #200 on 503) took 6.93real
+**** Bug-finder - Function Analysis - 3 (Verified functions #201 to #300 on 503) took 10.15real
+**** Bug-finder - Function Analysis - 4 (Verified functions #301 to #400 on 503) took 3.49real
+**** Bug-finder - Function Analysis - 5 (Verified functions #401 to #500 on 503) took 3.5real
+**** Bug-finder - Function Analysis - 6 (Verified functions #501 to #503 on 503) took 1.46real
+Maximum Memory Usage: 11519 MB
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 226
+  - PADDING_INFO_LEAK: 1
+  - FLOAT_OVFL: 1
+  - CHAR_EOF_CONFUSED: 1
+  - INVALID_MEMORY_ASSUMPTION: 1
+  - BAD_UMASK: 1
+  - OBJECT_SIZE_MISMATCH: 1
+  - CRYPTO_PKEY_INCORRECT_INIT: 1
+  - UNSAFE_STD_CRYPT: 1
+  - CLOSED_RESOURCE_USE: 1
+  - SIG_HANDLER_ASYNC_UNSAFE_STRICT: 1
+  - TAINTED_LOOP_BOUNDARY: 1
+  - CRYPTO_CIPHER_NO_KEY: 1
+  - OUT_BOUND_PTR: 1
+  - ASSERT: 1
+  - CRYPTO_PKEY_NO_PARAMS: 1
+  - STRLIB_BUFFER_OVERFLOW: 1
+  - NON_INIT_PTR: 1
+  - ERRNO_NOT_CHECKED: 2
+  - MEM_LEAK: 4
+  - ERRNO_MISUSE: 1
+  - CRYPTO_SSL_WEAK_PROTOCOL: 1
+  - FLOAT_CONV_OVFL: 1
+  - PATH_TRAVERSAL: 1
+  - TAINTED_PTR_OFFSET: 1
+  - MISSING_BYTESWAP: 2
+  - CRYPTO_CIPHER_WEAK_MODE: 1
+  - BAD_PLAIN_CHAR_USE: 1
+  - MEM_STD_LIB: 1
+  - OBSOLETE_STD_FUNC: 1
+  - SIG_HANDLER_ERRNO_MISUSE: 1
+  - CRYPTO_RSA_BAD_PADDING: 1
+  - ALIGNMENT_CHANGE: 1
+  - FLOAT_STD_LIB: 1
+  - SIG_HANDLER_COMP_EXCP_RETURN: 1
+  - MEMSET_INVALID_SIZE: 1
+  - SETJMP_LONGJMP_USE: 2
+  - CRYPTO_PKEY_NO_PUBLIC_KEY: 1
+  - BAD_PTR_SCALING: 1
+  - RAND_SEED_CONSTANT: 1
+  - LOCAL_ADDR_ESCAPE: 1
+  - UNPROTECTED_MEMORY_ALLOCATION: 1
+  - USELESS_WRITE: 2
+  - MEMCMP_PADDING_DATA: 1
+  - BAD_PRIVILEGE_DROP_ORDER: 2
+  - INT_CONV_OVFL: 1
+  - TAINTED_INT_MOD: 1
+  - CRYPTO_MD_WEAK_HASH: 1
+  - NON_INIT_PTR_CONV: 1
+  - DOUBLE_RESOURCE_OPEN: 1
+  - CRYPTO_CIPHER_NO_DATA: 1
+  - BAD_FLOAT_OP: 1
+  - FILE_OBJECT_MISUSE: 2
+  - NON_SECURE_TEMP_FILE: 1
+  - BAD_FILE_ACCESS_MODE_STATUS: 1
+  - CRYPTO_PKEY_WEAK_PARAMS: 1
+  - PUTENV_AUTO_VAR: 1
+  - TOCTOU: 1
+  - UINT_OVFL: 1
+  - TAINTED_STRING: 1
+  - STD_FUNC_ARG_MISMATCH: 2
+  - INDETERMINATE_STRING: 1
+  - DANGEROUS_STD_FUNC: 2
+  - CRYPTO_CIPHER_CONSTANT_IV: 1
+  - NULL_PTR_ARITH: 1
+  - UNSAFE_STD_FUNC: 1
+  - EXIT_ABNORMAL_HANDLER: 1
+  - CRYPTO_PKEY_INCORRECT_KEY: 1
+  - PARTIALLY_ACCESSED_ARRAY: 2
+  - READ_ONLY_RESOURCE_WRITE: 1
+  - TAINTED_PATH_CMD: 1
+  - CRYPTO_CIPHER_NO_ALGORITHM: 1
+  - SHIFT_OVFL: 1
+  - SIG_HANDLER_ASYNC_UNSAFE: 3
+  - NULL_PTR: 1
+  - NON_POSITIVE_VLA_SIZE: 1
+  - CRYPTO_PKEY_NO_PEER: 1
+  - VULNERABLE_PRNG: 3
+  - BAD_FREE: 1
+  - DESTROY_LOCKED: 1
+  - READLINK_MISUSE: 1
+  - SIGN_CHANGE: 1
+  - SENSITIVE_DATA_PRINT: 1
+  - USELESS_IF: 1
+  - TAINTED_ARRAY_INDEX: 1
+  - CRYPTO_CIPHER_WEAK_CIPHER: 1
+  - FLOAT_ABSORPTION: 1
+  - SIG_HANDLER_SHARED_OBJECT: 1
+  - SENSITIVE_HEAP_NOT_CLEARED: 1
+  - MEMSET_INVALID_VALUE: 1
+  - CHROOT_MISUSE: 2
+  - CRYPTO_RSA_WEAK_PADDING: 1
+  - UNREACHABLE: 1
+  - IO_INTERLEAVING: 1
+  - INT_STD_LIB: 2
+  - HARD_CODED_MEM_SIZE: 1
+  - CONSTANT_OBJECT_WRITE: 1
+  - DANGEROUS_PERMISSIONS: 1
+  - INT_TO_FLOAT_PRECISION_LOSS: 1
+  - FREED_PTR: 1
+  - TAINTED_HOSTID: 1
+  - CRYPTO_RSA_NO_PADDING: 1
+  - DOUBLE_RESOURCE_CLOSE: 1
+  - TAINTED_VLA_SIZE: 1
+  - CRYPTO_CIPHER_NO_IV: 1
+  - TAINTED_MEMORY_ALLOC_SIZE: 1
+  - RELATIVE_PATH_CMD: 1
+  - CRYPTO_PKEY_NO_DATA: 1
+  - STRLIB_BUFFER_UNDERFLOW: 1
+  - FILE_EXPOSURE_TO_CHILD: 1
+  - INT_OVFL: 1
+  - MISSING_ERRNO_RESET: 1
+  - DATA_RACE: 2
+  - TAINTED_PTR: 1
+  - CRYPTO_CIPHER_CONSTANT_KEY: 1
+  - BITWISE_NEG: 1
+  - INVALID_FILE_POS: 1
+  - RETURN_NOT_CHECKED: 3
+  - STR_STD_LIB: 1
+  - UNSAFE_STR_TO_NUMERIC: 1
+  - CRYPTO_RSA_NO_BLINDING: 1
+  - DATA_LENGTH_MISMATCH: 1
+  - DEAD_CODE: 1
+  - TAINTED_SIGN_CHANGE: 1
+  - RELATIVE_PATH_LIB: 1
+  - CRYPTO_CIPHER_BAD_FUNCTION: 1
+  - SHIFT_NEG: 1
+  - OUT_BOUND_ARRAY: 1
+  - RAND_SEED_PREDICTABLE: 1
+  - OTHER_STD_LIB: 1
+  - SIZEOF_MISUSE: 1
+  - INVALID_VA_LIST_ARG: 1
+  - DATA_RACE_STD_LIB: 1
+  - NON_INIT_VAR: 2
+  - PATH_BUFFER_OVERFLOW: 1
+  - CRYPTO_PKEY_NO_PRIVATE_KEY: 1
+  - NON_REENTRANT_STD_RETURN: 1
+  - DOUBLE_DEALLOCATION: 1
+  - MISSING_PRIVILEGE_DROP_CHECK: 1
+  - UINT_CONV_OVFL: 1
+  - CRYPTO_MD_BAD_FUNCTION: 1
+  - CRYPTO_CIPHER_NO_FINAL: 1
+  - TAINTED_INT_DIVISION: 1
+  - WRITE_INTERNAL_BUFFER_RETURNED_FROM_STD_FUNC: 1
+  - SENSITIVE_STACK_NOT_CLEARED: 1
+  - BAD_NETWORK_CONNECT_ORDER: 2
+  - RESOURCE_LEAK: 1
+  - PTR_TO_DIFF_ARRAY: 1
+  - CRYPTO_RSA_LOW_EXPONENT: 1
+  - TAINTED_PATH_LIB: 1
+  - BAD_EQUAL_EQUAL_USE: 1
+  - BAD_EQUAL_USE: 2
+  - BAD_INT_PTR_CAST: 2
+  - BITWISE_ARITH_MIX: 1
+  - DEACTIVATED_CODE: 1
+  - DECL_MISMATCH: 1
+  - FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE: 1
+  - FUNC_CAST: 4
+  - FUNC_PTR_ABSOLUTE_ADDR: 1
+  - HARD_CODED_BUFFER_SIZE: 2
+  - HARD_CODED_LOOP_BOUNDARY: 1
+  - IMPROPER_ARRAY_INIT: 2
+  - INLINE_CONSTRAINT_NOT_RESPECTED: 1
+  - MACRO_USED_AS_OBJECT: 2
+  - MISSING_FREED_PTR_RESET: 3
+  - MISSING_NULL_CHAR: 1
+  - MISSING_RETURN: 1
+  - MISSING_SWITCH_BREAK: 2
+  - MORE_THAN_ONE_STATEMENT: 1
+  - OPERATOR_PRECEDENCE: 1
+  - OVERLAPPING_ASSIGN: 1
+  - OVERLAPPING_COPY: 1
+  - PASS_BY_VALUE: 1
+  - PRE_DIRECTIVE_MACRO_ARG: 2
+  - PRE_UCNAME_JOIN_TOKENS: 1
+  - PTR_CAST: 1
+  - PTR_SIZEOF_MISMATCH: 1
+  - QUALIFIER_MISMATCH: 1
+  - SIDE_EFFECT_IGNORED: 1
+  - STREAM_WITH_SIDE_EFFECT: 2
+  - STRING_FORMAT: 1
+  - STR_FORMAT_BUFFER_OVERFLOW: 1
+  - TEMP_OBJECT_ACCESS: 1
+  - TYPEDEF_MISMATCH: 1
+  - UNCALLED_FUNC: 1
+  - UNPROTOTYPED_FUNC_CALL: 1
+  - UNSAFE_SYSTEM_CALL: 2
+  - UNUSED_PARAMETER: 1
+  - VAR_SHADOWING: 1
+  - VA_ARG_INCORRECT_TYPE: 1
+
+GUI files generation completed in 1.85real
+
+* Total IL complexity: 93250
+
+**********************************************************
+***
+*** Bug-finder - Function Analysis done
+***
+**********************************************************
+Ending at: Tue Feb 25 19:55:43 2020
+User time for function: 00:00:35.27 (35.27real, 215.88u + 12.27s (0.17gc))
+
+Polyspace C analysis
+Copyright 1999-2020 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Feb 25 19:55:43 2020
+Host: Linux bat6312glnxa64 4.9.0-4-amd64 x86_64
+User: batserve
+**********************************************************
+***
+*** Beginning Bug-finder - Module Analysis
+***
+**********************************************************
+**** Bug-finder - Module Analysis - 1 (Computing modules)
+**** Bug-finder - Module Analysis - 1 (Computing modules) took 0.1real, 0.02u + 0.01s
+* Created 1 module
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1: 171 functions)
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1: 171 functions) took 10.55real
+Maximum Memory Usage: 575 MB
+Maximum Memory Usage: 0 MB
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 243
+  - PADDING_INFO_LEAK: 2
+  - FLOAT_OVFL: 1
+  - CHAR_EOF_CONFUSED: 1
+  - INVALID_MEMORY_ASSUMPTION: 1
+  - BAD_UMASK: 1
+  - CRYPTO_CIPHER_PREDICTABLE_KEY: 1
+  - OBJECT_SIZE_MISMATCH: 1
+  - MEMCMP_FLOAT: 1
+  - CRYPTO_PKEY_INCORRECT_INIT: 1
+  - UNSAFE_STD_CRYPT: 1
+  - INT_ZERO_DIV: 1
+  - TAINTED_EXTERNAL_CMD: 1
+  - CLOSED_RESOURCE_USE: 1
+  - SIG_HANDLER_ASYNC_UNSAFE_STRICT: 1
+  - TAINTED_LOOP_BOUNDARY: 1
+  - CRYPTO_CIPHER_NO_KEY: 1
+  - OUT_BOUND_PTR: 1
+  - ASSERT: 1
+  - CRYPTO_PKEY_NO_PARAMS: 1
+  - STRLIB_BUFFER_OVERFLOW: 1
+  - NON_INIT_PTR: 1
+  - ERRNO_NOT_CHECKED: 2
+  - MEM_LEAK: 4
+  - ERRNO_MISUSE: 1
+  - CRYPTO_SSL_WEAK_PROTOCOL: 1
+  - FLOAT_CONV_OVFL: 1
+  - PATH_TRAVERSAL: 1
+  - TAINTED_PTR_OFFSET: 1
+  - MISSING_BYTESWAP: 2
+  - CRYPTO_CIPHER_WEAK_MODE: 1
+  - BAD_PLAIN_CHAR_USE: 1
+  - MEM_STD_LIB: 1
+  - OBSOLETE_STD_FUNC: 1
+  - SIG_HANDLER_ERRNO_MISUSE: 1
+  - CRYPTO_RSA_BAD_PADDING: 1
+  - ALIGNMENT_CHANGE: 1
+  - FLOAT_STD_LIB: 1
+  - SIG_HANDLER_COMP_EXCP_RETURN: 1
+  - MEMSET_INVALID_SIZE: 1
+  - SETJMP_LONGJMP_USE: 2
+  - CRYPTO_PKEY_NO_PUBLIC_KEY: 1
+  - BAD_PTR_SCALING: 1
+  - RAND_SEED_CONSTANT: 1
+  - LOCAL_ADDR_ESCAPE: 1
+  - UNPROTECTED_MEMORY_ALLOCATION: 1
+  - USELESS_WRITE: 2
+  - MEMCMP_PADDING_DATA: 1
+  - TAINTED_ENV_VARIABLE: 1
+  - BAD_PRIVILEGE_DROP_ORDER: 2
+  - INT_CONV_OVFL: 1
+  - TAINTED_INT_MOD: 1
+  - CRYPTO_MD_WEAK_HASH: 1
+  - NON_INIT_PTR_CONV: 1
+  - DOUBLE_RESOURCE_OPEN: 1
+  - CRYPTO_CIPHER_NO_DATA: 1
+  - BAD_FLOAT_OP: 1
+  - FILE_OBJECT_MISUSE: 2
+  - NON_SECURE_TEMP_FILE: 1
+  - BAD_FILE_ACCESS_MODE_STATUS: 1
+  - CRYPTO_PKEY_WEAK_PARAMS: 1
+  - PUTENV_AUTO_VAR: 1
+  - TOO_MANY_VA_ARG_CALLS: 1
+  - CHARACTER_MISUSE: 1
+  - TOCTOU: 1
+  - UINT_OVFL: 1
+  - TAINTED_STRING: 3
+  - STD_FUNC_ARG_MISMATCH: 2
+  - INDETERMINATE_STRING: 1
+  - DANGEROUS_STD_FUNC: 2
+  - CRYPTO_CIPHER_CONSTANT_IV: 1
+  - NULL_PTR_ARITH: 1
+  - UNSAFE_STD_FUNC: 1
+  - EXIT_ABNORMAL_HANDLER: 1
+  - CRYPTO_PKEY_INCORRECT_KEY: 1
+  - PARTIALLY_ACCESSED_ARRAY: 2
+  - READ_ONLY_RESOURCE_WRITE: 1
+  - TAINTED_PATH_CMD: 1
+  - CRYPTO_CIPHER_NO_ALGORITHM: 1
+  - SHIFT_OVFL: 1
+  - SIG_HANDLER_ASYNC_UNSAFE: 3
+  - NULL_PTR: 1
+  - NON_POSITIVE_VLA_SIZE: 1
+  - CRYPTO_PKEY_NO_PEER: 1
+  - VULNERABLE_PRNG: 3
+  - BAD_FREE: 1
+  - DESTROY_LOCKED: 1
+  - READLINK_MISUSE: 1
+  - SIGN_CHANGE: 1
+  - INVALID_ENV_POINTER: 1
+  - SENSITIVE_DATA_PRINT: 1
+  - USELESS_IF: 1
+  - TAINTED_ARRAY_INDEX: 1
+  - CRYPTO_CIPHER_WEAK_CIPHER: 1
+  - FLOAT_ABSORPTION: 1
+  - SIG_HANDLER_SHARED_OBJECT: 1
+  - SENSITIVE_HEAP_NOT_CLEARED: 1
+  - MEMSET_INVALID_VALUE: 1
+  - CHROOT_MISUSE: 2
+  - CRYPTO_RSA_WEAK_PADDING: 1
+  - UNREACHABLE: 1
+  - IO_INTERLEAVING: 1
+  - INT_STD_LIB: 2
+  - HARD_CODED_MEM_SIZE: 1
+  - CONSTANT_OBJECT_WRITE: 1
+  - DANGEROUS_PERMISSIONS: 1
+  - CRYPTO_CIPHER_PREDICTABLE_IV: 1
+  - INT_TO_FLOAT_PRECISION_LOSS: 1
+  - MISSING_SWITCH_CASE: 1
+  - FLOAT_ZERO_DIV: 1
+  - FREED_PTR: 1
+  - MEMCMP_STRINGS: 1
+  - TAINTED_HOSTID: 1
+  - CRYPTO_RSA_NO_PADDING: 1
+  - DOUBLE_RESOURCE_CLOSE: 1
+  - TAINTED_VLA_SIZE: 1
+  - CRYPTO_CIPHER_NO_IV: 1
+  - TAINTED_MEMORY_ALLOC_SIZE: 1
+  - RELATIVE_PATH_CMD: 1
+  - CRYPTO_PKEY_NO_DATA: 1
+  - STRLIB_BUFFER_UNDERFLOW: 1
+  - FILE_EXPOSURE_TO_CHILD: 1
+  - INT_OVFL: 1
+  - MISSING_ERRNO_RESET: 1
+  - DATA_RACE: 2
+  - TAINTED_PTR: 2
+  - CRYPTO_CIPHER_CONSTANT_KEY: 1
+  - BITWISE_NEG: 1
+  - INVALID_FILE_POS: 1
+  - UNSAFE_STR_TO_NUMERIC: 1
+  - STR_STD_LIB: 1
+  - RETURN_NOT_CHECKED: 3
+  - DEAD_CODE: 1
+  - DATA_LENGTH_MISMATCH: 1
+  - CRYPTO_RSA_NO_BLINDING: 1
+  - RELATIVE_PATH_LIB: 1
+  - TAINTED_SIGN_CHANGE: 1
+  - OUT_BOUND_ARRAY: 1
+  - SHIFT_NEG: 1
+  - CRYPTO_CIPHER_BAD_FUNCTION: 1
+  - RAND_SEED_PREDICTABLE: 1
+  - OTHER_STD_LIB: 1
+  - SIZEOF_MISUSE: 1
+  - INVALID_VA_LIST_ARG: 1
+  - DATA_RACE_STD_LIB: 1
+  - NON_INIT_VAR: 2
+  - PATH_BUFFER_OVERFLOW: 1
+  - CRYPTO_PKEY_NO_PRIVATE_KEY: 1
+  - NON_REENTRANT_STD_RETURN: 1
+  - DOUBLE_DEALLOCATION: 1
+  - MISSING_PRIVILEGE_DROP_CHECK: 1
+  - UINT_CONV_OVFL: 1
+  - CRYPTO_MD_BAD_FUNCTION: 1
+  - TAINTED_STRING_FORMAT: 1
+  - CRYPTO_CIPHER_NO_FINAL: 1
+  - TAINTED_INT_DIVISION: 1
+  - WRITE_INTERNAL_BUFFER_RETURNED_FROM_STD_FUNC: 1
+  - SENSITIVE_STACK_NOT_CLEARED: 1
+  - BAD_NETWORK_CONNECT_ORDER: 2
+  - RESOURCE_LEAK: 1
+  - PTR_TO_DIFF_ARRAY: 1
+  - CRYPTO_RSA_LOW_EXPONENT: 1
+  - TAINTED_PATH_LIB: 1
+  - BAD_EQUAL_EQUAL_USE: 1
+  - BAD_EQUAL_USE: 2
+  - BAD_INT_PTR_CAST: 2
+  - BITWISE_ARITH_MIX: 1
+  - DEACTIVATED_CODE: 1
+  - DECL_MISMATCH: 1
+  - FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE: 1
+  - FUNC_CAST: 4
+  - FUNC_PTR_ABSOLUTE_ADDR: 1
+  - HARD_CODED_BUFFER_SIZE: 2
+  - HARD_CODED_LOOP_BOUNDARY: 1
+  - IMPROPER_ARRAY_INIT: 2
+  - INLINE_CONSTRAINT_NOT_RESPECTED: 1
+  - MACRO_USED_AS_OBJECT: 2
+  - MISSING_FREED_PTR_RESET: 3
+  - MISSING_NULL_CHAR: 1
+  - MISSING_RETURN: 1
+  - MISSING_SWITCH_BREAK: 2
+  - MORE_THAN_ONE_STATEMENT: 1
+  - OPERATOR_PRECEDENCE: 1
+  - OVERLAPPING_ASSIGN: 1
+  - OVERLAPPING_COPY: 1
+  - PASS_BY_VALUE: 1
+  - PRE_DIRECTIVE_MACRO_ARG: 2
+  - PRE_UCNAME_JOIN_TOKENS: 1
+  - PTR_CAST: 1
+  - PTR_SIZEOF_MISMATCH: 1
+  - QUALIFIER_MISMATCH: 1
+  - SIDE_EFFECT_IGNORED: 1
+  - STREAM_WITH_SIDE_EFFECT: 2
+  - STRING_FORMAT: 1
+  - STR_FORMAT_BUFFER_OVERFLOW: 1
+  - TEMP_OBJECT_ACCESS: 1
+  - TYPEDEF_MISMATCH: 1
+  - UNCALLED_FUNC: 1
+  - UNPROTOTYPED_FUNC_CALL: 1
+  - UNSAFE_SYSTEM_CALL: 2
+  - UNUSED_PARAMETER: 1
+  - VAR_SHADOWING: 1
+  - VA_ARG_INCORRECT_TYPE: 1
+
+GUI files generation completed in 0.89real
+
+**********************************************************
+***
+*** Bug-finder - Module Analysis done
+***
+**********************************************************
+Ending at: Tue Feb 25 19:55:58 2020
+User time for module: 00:00:14.78 (14.78real, 42u + 2.72s (0.09gc))
+
+Polyspace C analysis
+Copyright 1999-2020 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Feb 25 19:55:58 2020
+Host: Linux bat6312glnxa64 4.9.0-4-amd64 x86_64
+User: batserve
+**********************************************************
+***
+*** Beginning Bug-finder - Global analysis
+***
+**********************************************************
+**** Bug-finder - Global analysis - 1 (P_CCG)
+**** Bug-finder - Global analysis - 1 (P_CCG) took 0.01real, 0u + 0s
+**** Bug-finder - Global analysis - 2 (P_DLC)
+**** Bug-finder - Global analysis - 2 (P_DLC) took 0.01real, 0.01u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 248
+  - PADDING_INFO_LEAK: 2
+  - FLOAT_OVFL: 1
+  - CHAR_EOF_CONFUSED: 1
+  - INVALID_MEMORY_ASSUMPTION: 1
+  - DOUBLE_UNLOCK: 1
+  - BAD_UMASK: 1
+  - CRYPTO_CIPHER_PREDICTABLE_KEY: 1
+  - OBJECT_SIZE_MISMATCH: 1
+  - MEMCMP_FLOAT: 1
+  - CRYPTO_PKEY_INCORRECT_INIT: 1
+  - UNSAFE_STD_CRYPT: 1
+  - INT_ZERO_DIV: 1
+  - TAINTED_EXTERNAL_CMD: 1
+  - CLOSED_RESOURCE_USE: 1
+  - SIG_HANDLER_ASYNC_UNSAFE_STRICT: 1
+  - TAINTED_LOOP_BOUNDARY: 1
+  - CRYPTO_CIPHER_NO_KEY: 1
+  - OUT_BOUND_PTR: 1
+  - ASSERT: 1
+  - CRYPTO_PKEY_NO_PARAMS: 1
+  - STRLIB_BUFFER_OVERFLOW: 1
+  - NON_INIT_PTR: 1
+  - ERRNO_NOT_CHECKED: 2
+  - MEM_LEAK: 4
+  - ERRNO_MISUSE: 1
+  - CRYPTO_SSL_WEAK_PROTOCOL: 1
+  - FLOAT_CONV_OVFL: 1
+  - PATH_TRAVERSAL: 1
+  - TAINTED_PTR_OFFSET: 1
+  - MISSING_BYTESWAP: 2
+  - CRYPTO_CIPHER_WEAK_MODE: 1
+  - BAD_PLAIN_CHAR_USE: 1
+  - MEM_STD_LIB: 1
+  - OBSOLETE_STD_FUNC: 1
+  - SIG_HANDLER_ERRNO_MISUSE: 1
+  - CRYPTO_RSA_BAD_PADDING: 1
+  - ALIGNMENT_CHANGE: 1
+  - FLOAT_STD_LIB: 1
+  - SIG_HANDLER_COMP_EXCP_RETURN: 1
+  - MEMSET_INVALID_SIZE: 1
+  - SETJMP_LONGJMP_USE: 2
+  - CRYPTO_PKEY_NO_PUBLIC_KEY: 1
+  - BAD_PTR_SCALING: 1
+  - RAND_SEED_CONSTANT: 1
+  - LOCAL_ADDR_ESCAPE: 1
+  - UNPROTECTED_MEMORY_ALLOCATION: 1
+  - USELESS_WRITE: 2
+  - MEMCMP_PADDING_DATA: 1
+  - TAINTED_ENV_VARIABLE: 1
+  - BAD_PRIVILEGE_DROP_ORDER: 2
+  - INT_CONV_OVFL: 1
+  - TAINTED_INT_MOD: 1
+  - CRYPTO_MD_WEAK_HASH: 1
+  - NON_INIT_PTR_CONV: 1
+  - DOUBLE_RESOURCE_OPEN: 1
+  - CRYPTO_CIPHER_NO_DATA: 1
+  - BAD_FLOAT_OP: 1
+  - FILE_OBJECT_MISUSE: 2
+  - NON_SECURE_TEMP_FILE: 1
+  - BAD_FILE_ACCESS_MODE_STATUS: 1
+  - CRYPTO_PKEY_WEAK_PARAMS: 1
+  - PUTENV_AUTO_VAR: 1
+  - TOO_MANY_VA_ARG_CALLS: 1
+  - CHARACTER_MISUSE: 1
+  - TOCTOU: 1
+  - UINT_OVFL: 1
+  - TAINTED_STRING: 3
+  - STD_FUNC_ARG_MISMATCH: 2
+  - INDETERMINATE_STRING: 1
+  - DANGEROUS_STD_FUNC: 2
+  - CRYPTO_CIPHER_CONSTANT_IV: 1
+  - NULL_PTR_ARITH: 1
+  - UNSAFE_STD_FUNC: 1
+  - EXIT_ABNORMAL_HANDLER: 1
+  - CRYPTO_PKEY_INCORRECT_KEY: 1
+  - PARTIALLY_ACCESSED_ARRAY: 2
+  - READ_ONLY_RESOURCE_WRITE: 1
+  - TAINTED_PATH_CMD: 1
+  - CRYPTO_CIPHER_NO_ALGORITHM: 1
+  - SHIFT_OVFL: 1
+  - SIG_HANDLER_ASYNC_UNSAFE: 3
+  - NULL_PTR: 1
+  - NON_POSITIVE_VLA_SIZE: 1
+  - CRYPTO_PKEY_NO_PEER: 1
+  - VULNERABLE_PRNG: 3
+  - BAD_FREE: 1
+  - DESTROY_LOCKED: 1
+  - READLINK_MISUSE: 1
+  - SIGN_CHANGE: 1
+  - INVALID_ENV_POINTER: 1
+  - SENSITIVE_DATA_PRINT: 1
+  - USELESS_IF: 1
+  - DOUBLE_LOCK: 1
+  - TAINTED_ARRAY_INDEX: 1
+  - CRYPTO_CIPHER_WEAK_CIPHER: 1
+  - FLOAT_ABSORPTION: 1
+  - SIG_HANDLER_SHARED_OBJECT: 1
+  - SENSITIVE_HEAP_NOT_CLEARED: 1
+  - MEMSET_INVALID_VALUE: 1
+  - CHROOT_MISUSE: 2
+  - CRYPTO_RSA_WEAK_PADDING: 1
+  - UNREACHABLE: 1
+  - IO_INTERLEAVING: 1
+  - INT_STD_LIB: 2
+  - HARD_CODED_MEM_SIZE: 1
+  - CONSTANT_OBJECT_WRITE: 1
+  - BAD_UNLOCK: 1
+  - DANGEROUS_PERMISSIONS: 1
+  - CRYPTO_CIPHER_PREDICTABLE_IV: 1
+  - INT_TO_FLOAT_PRECISION_LOSS: 1
+  - MISSING_SWITCH_CASE: 1
+  - FLOAT_ZERO_DIV: 1
+  - FREED_PTR: 1
+  - MEMCMP_STRINGS: 1
+  - TAINTED_HOSTID: 1
+  - CRYPTO_RSA_NO_PADDING: 1
+  - DOUBLE_RESOURCE_CLOSE: 1
+  - DEADLOCK: 1
+  - TAINTED_VLA_SIZE: 1
+  - CRYPTO_CIPHER_NO_IV: 1
+  - TAINTED_MEMORY_ALLOC_SIZE: 1
+  - RELATIVE_PATH_CMD: 1
+  - CRYPTO_PKEY_NO_DATA: 1
+  - STRLIB_BUFFER_UNDERFLOW: 1
+  - FILE_EXPOSURE_TO_CHILD: 1
+  - INT_OVFL: 1
+  - MISSING_ERRNO_RESET: 1
+  - DATA_RACE: 2
+  - INVALID_FILE_POS: 1
+  - BITWISE_NEG: 1
+  - CRYPTO_CIPHER_CONSTANT_KEY: 1
+  - TAINTED_PTR: 2
+  - UNSAFE_STR_TO_NUMERIC: 1
+  - STR_STD_LIB: 1
+  - RETURN_NOT_CHECKED: 3
+  - DEAD_CODE: 1
+  - DATA_LENGTH_MISMATCH: 1
+  - CRYPTO_RSA_NO_BLINDING: 1
+  - RELATIVE_PATH_LIB: 1
+  - TAINTED_SIGN_CHANGE: 1
+  - OUT_BOUND_ARRAY: 1
+  - SHIFT_NEG: 1
+  - CRYPTO_CIPHER_BAD_FUNCTION: 1
+  - RAND_SEED_PREDICTABLE: 1
+  - OTHER_STD_LIB: 1
+  - SIZEOF_MISUSE: 1
+  - INVALID_VA_LIST_ARG: 1
+  - DATA_RACE_STD_LIB: 1
+  - NON_INIT_VAR: 2
+  - PATH_BUFFER_OVERFLOW: 1
+  - CRYPTO_PKEY_NO_PRIVATE_KEY: 1
+  - NON_REENTRANT_STD_RETURN: 1
+  - DOUBLE_DEALLOCATION: 1
+  - MISSING_PRIVILEGE_DROP_CHECK: 1
+  - UINT_CONV_OVFL: 1
+  - CRYPTO_MD_BAD_FUNCTION: 1
+  - TAINTED_STRING_FORMAT: 1
+  - BAD_LOCK: 1
+  - CRYPTO_CIPHER_NO_FINAL: 1
+  - TAINTED_INT_DIVISION: 1
+  - WRITE_INTERNAL_BUFFER_RETURNED_FROM_STD_FUNC: 1
+  - SENSITIVE_STACK_NOT_CLEARED: 1
+  - BAD_NETWORK_CONNECT_ORDER: 2
+  - RESOURCE_LEAK: 1
+  - PTR_TO_DIFF_ARRAY: 1
+  - CRYPTO_RSA_LOW_EXPONENT: 1
+  - TAINTED_PATH_LIB: 1
+  - BAD_EQUAL_EQUAL_USE: 1
+  - BAD_EQUAL_USE: 2
+  - BAD_INT_PTR_CAST: 2
+  - BITWISE_ARITH_MIX: 1
+  - DEACTIVATED_CODE: 1
+  - DECL_MISMATCH: 1
+  - FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE: 1
+  - FUNC_CAST: 4
+  - FUNC_PTR_ABSOLUTE_ADDR: 1
+  - HARD_CODED_BUFFER_SIZE: 2
+  - HARD_CODED_LOOP_BOUNDARY: 1
+  - IMPROPER_ARRAY_INIT: 2
+  - INLINE_CONSTRAINT_NOT_RESPECTED: 1
+  - MACRO_USED_AS_OBJECT: 2
+  - MISSING_FREED_PTR_RESET: 3
+  - MISSING_NULL_CHAR: 1
+  - MISSING_RETURN: 1
+  - MISSING_SWITCH_BREAK: 2
+  - MORE_THAN_ONE_STATEMENT: 1
+  - OPERATOR_PRECEDENCE: 1
+  - OVERLAPPING_ASSIGN: 1
+  - OVERLAPPING_COPY: 1
+  - PASS_BY_VALUE: 1
+  - PRE_DIRECTIVE_MACRO_ARG: 2
+  - PRE_UCNAME_JOIN_TOKENS: 1
+  - PTR_CAST: 1
+  - PTR_SIZEOF_MISMATCH: 1
+  - QUALIFIER_MISMATCH: 1
+  - SIDE_EFFECT_IGNORED: 1
+  - STREAM_WITH_SIDE_EFFECT: 2
+  - STRING_FORMAT: 1
+  - STR_FORMAT_BUFFER_OVERFLOW: 1
+  - TEMP_OBJECT_ACCESS: 1
+  - TYPEDEF_MISMATCH: 1
+  - UNCALLED_FUNC: 1
+  - UNPROTOTYPED_FUNC_CALL: 1
+  - UNSAFE_SYSTEM_CALL: 2
+  - UNUSED_PARAMETER: 1
+  - VAR_SHADOWING: 1
+  - VA_ARG_INCORRECT_TYPE: 1
+
+GUI files generation completed in 4.15real
+
+
+**********************************************************
+CUSTOM RULES Rule checker results
+ Use the Report Generator in order to get the complete report.
+**********************************************************
+Summary per file:
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/concurrency.c: 
+    37 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/cryptography.c: 
+    56 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/dataflow.c: 
+    38 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/dynamicmemory.c: 
+    16 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/goodpractice.c: 
+    31 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/lib_crypto_checkers.h: 
+    82 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/numerical.c: 
+    37 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/programming.c: 
+    167 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/programming2.c: 
+    1 rule violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/resourcemanagement.c: 
+    10 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/security.c: 
+    82 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/staticmemory.c: 
+    40 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/tainteddata.c: 
+    45 rules violated
+**********************************************************
+Summary per rule:
+  rule 7.1 violated 631 times
+  rule 8.1 violated 11 times
+
+
+**********************************************************
+MISRA C:2012 Rule checker results
+ Use the Report Generator in order to get the complete report.
+**********************************************************
+Summary per file:
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/concurrency.c: 
+    60 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/cryptography.c: 
+    302 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/dataflow.c: 
+    102 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/dynamicmemory.c: 
+    100 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/goodpractice.c: 
+    80 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/lib_crypto_checkers.h: 
+    10 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/numerical.c: 
+    118 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/programming.c: 
+    546 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/programming2.c: 
+    2 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/resourcemanagement.c: 
+    57 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/security.c: 
+    313 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/staticmemory.c: 
+    115 rules violated
+  File /mathworks/devel/bat/BR2020ad/build/matlab/polyspace/examples/cxx/Bug_Finder_Example/sources/tainteddata.c: 
+    143 rules violated
+**********************************************************
+Summary per rule:
+  rule 8.4 violated 557 times
+  rule 15.6 violated 211 times
+  rule 21.6 violated 154 times
+  rule 10.3 violated 122 times
+  rule 8.2 violated 114 times
+  rule 8.5 violated 79 times
+  rule 17.7 violated 76 times
+  rule D4.12 violated 73 times
+  rule 21.3 violated 72 times
+  rule 5.8 violated 43 times
+  rule 10.1 violated 40 times
+  rule 14.4 violated 37 times
+  rule D1.1 violated 35 times
+  rule 17.1 violated 29 times
+  rule 21.5 violated 25 times
+  rule D4.14 violated 19 times
+  rule D4.1 violated 17 times
+  rule 21.1 violated 12 times
+  rule 21.8 violated 12 times
+  rule 10.4 violated 10 times
+  rule 11.3 violated 10 times
+  rule 16.3 violated 10 times
+  rule 21.19 violated 10 times
+  rule 7.4 violated 10 times
+  rule 8.6 violated 10 times
+  rule 16.1 violated 9 times
+  rule 5.3 violated 9 times
+  rule 11.8 violated 8 times
+  rule 21.10 violated 8 times
+  rule D4.11 violated 7 times
+  rule 14.3 violated 6 times
+  rule 5.1 violated 6 times
+  rule 10.7 violated 5 times
+  rule 11.1 violated 5 times
+  rule 22.1 violated 5 times
+  rule 7.2 violated 5 times
+  rule 10.8 violated 4 times
+  rule 14.1 violated 4 times
+  rule 16.4 violated 4 times
+  rule 18.8 violated 4 times
+  rule 21.16 violated 4 times
+  rule 12.2 violated 3 times
+  rule 13.5 violated 3 times
+  rule 14.2 violated 3 times
+  rule 2.2 violated 3 times
+  rule 21.4 violated 3 times
+  rule 21.7 violated 3 times
+  rule 9.1 violated 3 times
+  rule D4.7 violated 3 times
+  rule 1.1 violated 2 times
+  rule 10.6 violated 2 times
+  rule 18.1 violated 2 times
+  rule 19.1 violated 2 times
+  rule 2.1 violated 2 times
+  rule 20.6 violated 2 times
+  rule 21.2 violated 2 times
+  rule 22.2 violated 2 times
+  rule 22.6 violated 2 times
+  rule 22.9 violated 2 times
+  rule 5.6 violated 2 times
+  rule 5.7 violated 2 times
+  rule 8.10 violated 2 times
+  rule 13.6 violated 1 time
+  rule 15.7 violated 1 time
+  rule 17.4 violated 1 time
+  rule 18.2 violated 1 time
+  rule 18.6 violated 1 time
+  rule 18.7 violated 1 time
+  rule 20.7 violated 1 time
+  rule 21.14 violated 1 time
+  rule 21.18 violated 1 time
+  rule 21.20 violated 1 time
+  rule 22.10 violated 1 time
+  rule 22.3 violated 1 time
+  rule 22.4 violated 1 time
+  rule 22.5 violated 1 time
+  rule 22.7 violated 1 time
+  rule 22.8 violated 1 time
+  rule 8.3 violated 1 time
+  rule 9.4 violated 1 time
+
+**********************************************************
+***
+*** Bug-finder - Global analysis done
+***
+**********************************************************
+Ending at: Tue Feb 25 19:56:05 2020
+User time for global: 00:00:06.81 (6.81real, 1.23u + 0.27s (0.12gc))
+User time for polyspace-bug-finder-server: 00:02:00 (120.72real, 295.55u + 20.23s (0.55gc))
+
+***
+*** End of Polyspace analysis
+***
